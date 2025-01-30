@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Foxsavvy</title>
+    <link rel="stylesheet" href="/public/scss/estilos.css">
+    <link rel="shortcut icon" href="/public/asset/icon/foxsavvy2.ico" type="image/x-icon">
+</head>
+<body>
+    <header></header>
+    <section id="splashScreen">
+        <img src="/public/asset/icon/foxsavvy2.svg" alt="Logo de FoxSavvy">
+        <h1>Foxsavvy</h1>
+    </section>
+    <main id="contenido-principal" class="hidden">
+        <section id="login">
+            <div class="logo_conteiner">
+                <img src="/public/asset/icon/foxsavvy1.svg" alt="logo de foxsavvy">
+            </div>
+            <div class="login-info_conteiner">
+                <p>¡Hola! Por favor, ingresa tu nombre y tu contraseña para continuar aprendiendo</p>
+                <button id="btn-crear_cuenta">Crear cuenta</button>
+                <button id="btn-iniciar_sesion">Iniciar sesión</button>
+            </div>
+        </section>
+        <section id="crear-cuenta" class="hidden">
+            <img src="/public/asset/icon/foxsavvy1.svg" alt="">
+            <div class="form-conteiner"> 
+                <h2>Crear Cuenta</h2>
+                <form id="signup-form">
+                    <input type="text" placeholder="Nombre completo" required>
+                    <input type="email" placeholder="Correo electrónico" required>
+                    <input type="password" placeholder="Contraseña" required>
+                    <button type="submit">Crear Cuenta</button>
+                </form>
+                <p>¿Ya tienes una cuenta? <a href="#iniciar-sesion" id="show-iniciarSesion">Iniciar Sesión</a></p>
+            </div>
+        </section>
+        <section id="iniciar-sesion" class="hidden">
+            <img src="" alt="logo">
+            <div class="form-conteiner"> 
+                <h2>Iniciar Sesión</h2>
+                <form id="login-form">
+                    <input type="email" placeholder="Correo electrónico" required>
+                    <input type="password" placeholder="Contraseña" required>
+                    <button type="submit">Iniciar Sesión</button>
+                </form>
+                <p>¿No tienes una cuenta? <a href="#crear-cuenta" id="show-crearCuenta">Crear Cuenta</a></p>
+            </div>
+        </section>
+    </main>
+    <script src="/src/main.js"></script>
+</body>
+</html>

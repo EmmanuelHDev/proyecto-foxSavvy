@@ -1,0 +1,217 @@
+@charset "UTF-8";
+:root {
+  --colorPrincipal:#FC850E;
+  --colorSecundario:#EBEBEB;
+  --colorFont: #999999;
+}
+
+html {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+@media screen and (min-width: 320px) and (max-width: 599px) {
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  body .hidden {
+    display: none !important;
+  }
+  body #splashScreen {
+    width: 100%;
+    height: 100vh;
+    background-color: var(--colorPrincipal);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  body #splashScreen img {
+    width: 75vw;
+    animation: logoAnimation 5s ease-in-out;
+  }
+  body #splashScreen h1 {
+    color: white;
+    font-size: 2rem;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+    margin-top: 1rem;
+  }
+  @keyframes logoAnimation {
+    0% {
+      opacity: 1;
+      transform: scale(1); /* Tamaño pequeño al inicio */
+    }
+    50% {
+      opacity: 0;
+      transform: scale(0.5); /* Tamaño más grande en la mitad */
+    }
+    100% {
+      opacity: 1;
+      transform: scale(1.2); /* Vuelve al tamaño pequeño al final */
+    }
+  }
+  body main {
+    background-color: var(--colorSecundario);
+  }
+  body main #login {
+    width: 100%;
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(2, 1fr);
+  }
+  body main #login .logo_conteiner {
+    width: 100%;
+    display: flex;
+    justify-content: end;
+    align-items: end;
+    background-color: var(--colorSecundario);
+    padding: 16px;
+  }
+  body main #login .logo_conteiner img {
+    position: relative;
+    top: 80px;
+    width: 60%;
+  }
+  body main #login .login-info_conteiner {
+    width: 100%;
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: #FFFFFF;
+    border-top-left-radius: 24px;
+    border-top-right-radius: 24px;
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.1);
+  }
+  body main #login .login-info_conteiner p {
+    margin-bottom: 30px;
+    text-align: center;
+    color: var(--colorFont);
+    font-weight: 500;
+  }
+  body main #login .login-info_conteiner button {
+    width: 100%;
+    height: 52px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.1);
+  }
+  body main #login .login-info_conteiner #btn-crear_cuenta {
+    background-color: var(--colorPrincipal);
+    border: none;
+    color: #FFFFFF;
+    font-weight: 500;
+    margin-bottom: 30px;
+  }
+  body main #login .login-info_conteiner #btn-iniciar_sesion {
+    background-color: #FFFFFF;
+    border: 1px solid var(--colorFont);
+    color: var(--colorPrincipal);
+    font-weight: 500;
+  }
+  body main #crear-cuenta {
+    width: 100%;
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(2, 1fr);
+  }
+  body main #crear-cuenta img {
+    width: 60%;
+    margin: 0 auto;
+  }
+  body main #crear-cuenta .form-conteiner {
+    padding: 16px;
+    display: flex;
+    gap: 16px;
+    flex-direction: column;
+    align-items: center;
+    background-color: #FFFFFF;
+    border-top-left-radius: 24px;
+    border-top-right-radius: 24px;
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.1);
+  }
+  body main #crear-cuenta .form-conteiner h2 {
+    text-align: center;
+    color: var(--colorPrincipal);
+  }
+  body main #crear-cuenta .form-conteiner form {
+    width: 100%;
+    height: 65%;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(4, 1fr);
+    gap: 4px;
+  }
+  body main #crear-cuenta .form-conteiner form input {
+    width: 100%;
+    height: 32px;
+  }
+  body main #crear-cuenta .form-conteiner form button {
+    width: 100%;
+    height: 52px;
+    border-radius: 10px;
+    border: none;
+    background-color: var(--colorPrincipal);
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.1);
+    color: #FFFFFF;
+    font-weight: 500;
+  }
+  body main #crear-cuenta .form-conteiner p {
+    position: relative;
+    bottom: 0;
+  }
+  body main #iniciar-sesion {
+    width: 100%;
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(2, 1fr);
+  }
+  body main #iniciar-sesion img {
+    width: 60%;
+    margin: 0 auto;
+  }
+  body main #iniciar-sesion .form-conteiner {
+    padding: 16px;
+    display: flex;
+    gap: 16px;
+    flex-direction: column;
+    align-items: center;
+    background-color: #FFFFFF;
+    border-top-left-radius: 24px;
+    border-top-right-radius: 24px;
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.1);
+  }
+  body main #iniciar-sesion .form-conteiner h2 {
+    text-align: center;
+    color: var(--colorPrincipal);
+  }
+  body main #iniciar-sesion .form-conteiner form {
+    width: 100%;
+    height: 65%;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(4, 1fr);
+    gap: 4px;
+  }
+  body main #iniciar-sesion .form-conteiner form input {
+    width: 100%;
+    height: 32px;
+  }
+  body main #iniciar-sesion .form-conteiner form button {
+    width: 100%;
+    height: 52px;
+    border-radius: 10px;
+    border: none;
+    background-color: var(--colorPrincipal);
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.1);
+    color: #FFFFFF;
+    font-weight: 500;
+  }
+  body main #iniciar-sesion .form-conteiner p {
+    position: relative;
+    bottom: 0;
+  }
+}/*# sourceMappingURL=estilos.css.map */
