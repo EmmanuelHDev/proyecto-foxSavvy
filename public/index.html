@@ -6,15 +6,16 @@
     <title>Foxsavvy</title>
     <link rel="stylesheet" href="/public/scss/estilos.css">
     <link rel="shortcut icon" href="/public/asset/icon/foxsavvy2.ico" type="image/x-icon">
+    <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
 </head>
 <body>
     <header></header>
-    <section id="splashScreen">
+    <section id="splashScreen" class="">
         <img src="/public/asset/icon/foxsavvy2.svg" alt="Logo de FoxSavvy">
         <h1>Foxsavvy</h1>
     </section>
     <main id="contenido-principal" class="hidden">
-        <section id="login">
+        <section id="login" class="">
             <div class="logo_conteiner">
                 <img src="/public/asset/icon/foxsavvy1.svg" alt="logo de foxsavvy">
             </div>
@@ -44,10 +45,421 @@
                 <form id="login-form">
                     <input type="email" placeholder="Correo electrónico" required>
                     <input type="password" placeholder="Contraseña" required>
-                    <button type="submit">Iniciar Sesión</button>
+                    <button type="submit" id="btn-plataforma">Iniciar Sesión</button>
                 </form>
                 <p>¿No tienes una cuenta? <a href="#crear-cuenta" id="show-crearCuenta">Crear Cuenta</a></p>
             </div>
+        </section>
+        <section id="plataforma" class="hidden">
+            <header id="header_plataforma">
+                <nav>
+                    <ul>
+                        <li class="user_name">Emmanuel H</li>
+                        <li class="racha">
+                            <span></span>
+                            <div id="puntos_racha">10</div>
+
+                        </li>
+                        <li class="monedas">
+                            <span></span>
+                            <p id="puntos_monedas">110</p>
+
+                        </li>
+                        <li class="experiencia">
+                            <span></span>
+                            <p class="puntos_experiencia">1110</p>
+                        </li>
+                    </ul>
+                </nav>
+            </header>
+            <section id="contenedor-temarios" class="">
+                <h2>Tu Aventura Financiera Comienza Aquí</h2>
+                <div class="contenedor-temarios_mundos">
+                    <div id="mundo_ahorro">
+                        <button id="btn-mundo1">Iniciar</button>
+                    </div>
+                    <div id="mundo_presupuesto">
+                        <button id="btn-mundo2">Iniciar</button>
+                    </div>
+                    <div id="mundo_inversiones">
+                        <button id="btn-mundo3">Iniciar</button>
+                    </div>
+                </div>
+            </section>
+            <section id="contenedor-tienda" class="hidden">
+                <h2>Bienvenidos a la tienda de foxsavvy</h2>
+                <section id="articulos-tiendas">
+                    <article>
+                        <div></div>
+                        <h4>Nombre del articulo</h4>
+                        <div class="precio">
+                            <span></span>
+                            <p>200</p>
+                        </div>
+                    </article>
+                    <article>
+                        <div></div>
+                        <h4>Nombre del articulo</h4>
+                        <div class="precio">
+                            <span></span>
+                            <p>200</p>
+                        </div>
+                    </article>
+                    <article>
+                        <div></div>
+                        <h4>Nombre del articulo</h4>
+                        <div class="precio">
+                            <span></span>
+                            <p>200</p>
+                        </div>
+                    </article>
+                    <article>
+                        <div></div>
+                        <h4>Nombre del articulo</h4>
+                        <div class="precio">
+                            <span></span>
+                            <p>200</p>
+                        </div>
+                    </article>
+                    <article>
+                        <div></div>
+                        <h4>Nombre del articulo</h4>
+                        <div class="precio">
+                            <span></span>
+                            <p>200</p>
+                        </div>
+                    </article>
+                    <article>
+                        <div></div>
+                        <h4>Nombre del articulo</h4>
+                        <div class="precio">
+                            <span></span>
+                            <p>200</p>
+                        </div>
+                    </article>
+                    <article>
+                        <div></div>
+                        <h4>Nombre del articulo</h4>
+                        <div class="precio">
+                            <span></span>
+                            <p>200</p>
+                        </div>
+                    </article>
+                    <article>
+                        <div></div>
+                        <h4>Nombre del articulo</h4>
+                        <div class="precio">
+                            <span></span>
+                            <p>200</p>
+                        </div>
+                    </article>
+                </section>
+            </section>
+            <section id="contenedor-rankings" class="hidden">
+                <h2>Ranking de la semana</h2>
+                <div class="contenedor-rankings">
+                    <article>
+                        <div class="usuario">
+                            <img src="/public/asset/img/savvycoins.svg" alt="">
+                            <h4>Emmanuel Herrera</h4>
+                        </div>
+                        
+                        <p>+ 100</p>
+                    </article>
+                    <article>
+                        <div class="usuario">
+                            <img src="/public/asset/img/savvycoins.svg" alt="">
+                            <h4>Emmanuel Herrera</h4>
+                        </div>
+                        
+                        <p>+ 100</p>
+                    </article>
+                    <article>
+                        <div class="usuario">
+                            <img src="/public/asset/img/savvycoins.svg" alt="">
+                            <h4>Emmanuel Herrera</h4>
+                        </div>
+                        
+                        <p>+ 100</p>
+                    </article>
+                    <article>
+                        <div class="usuario">
+                            <img src="/public/asset/img/savvycoins.svg" alt="">
+                            <h4>Emmanuel Herrera</h4>
+                        </div>
+                        
+                        <p>+ 100</p>
+                    </article>
+                    <article>
+                        <div class="usuario">
+                            <img src="/public/asset/img/savvycoins.svg" alt="">
+                            <h4>Emmanuel Herrera</h4>
+                        </div>
+                        
+                        <p>+ 100</p>
+                    </article>
+                    <article>
+                        <div class="usuario">
+                            <img src="/public/asset/img/savvycoins.svg" alt="">
+                            <h4>Emmanuel Herrera</h4>
+                        </div>
+                        
+                        <p>+ 100</p>
+                    </article>
+                    <article>
+                        <div class="usuario">
+                            <img src="/public/asset/img/savvycoins.svg" alt="">
+                            <h4>Emmanuel Herrera</h4>
+                        </div>
+                        
+                        <p>+ 100</p>
+                    </article>
+                    <article>
+                        <div class="usuario">
+                            <img src="/public/asset/img/savvycoins.svg" alt="">
+                            <h4>Emmanuel Herrera</h4>
+                        </div>
+                        
+                        <p>+ 100</p>
+                    </article>
+                    <article>
+                        <div class="usuario">
+                            <img src="/public/asset/img/savvycoins.svg" alt="">
+                            <h4>Emmanuel Herrera</h4>
+                        </div>
+                        
+                        <p>+ 100</p>
+                    </article>
+                    <article>
+                        <div class="usuario">
+                            <img src="/public/asset/img/savvycoins.svg" alt="">
+                            <h4>Emmanuel Herrera</h4>
+                        </div>
+                        
+                        <p>+ 100</p>
+                    </article>
+                </div>
+            </section>
+            <section id="contenedor-perfil" class="hidden">
+                <article class="perfil-usuario">
+                    <img src="/public/asset/img/racha.png" alt="">
+                    <div class="perfil_usuario">
+                        <h2>Emmanuel H</h2>
+                        <div class="perfil_puntos">
+                            <span class="perfil_monedas"></span>
+                            <p>110</p>
+                            <span class="perfil_experiencia"></span>
+                            <p class="puntos_experiencia">100</p>
+                        </div>
+                    </div>
+
+                </article>
+                <div class="amigos">
+                    <h3>Amigos</h3>
+                    <div class="agregarAmigo">
+                        <p>Cantidad de amigos: <span id="cantidad_amigos">11</span></p>
+                        <button id="btn_buscar-amigos"><span></span>Agragar Amigos</button>
+                    </div>
+                </div>
+                <div class="logros">
+                    <div>
+                       <h3>Logros</h3>
+                    </div>
+                    <div class="logros-usuario">
+                        <article></article>
+                        <article></article>
+                        <article></article>
+                        <article></article>
+                        <article></article>
+                    </div>
+
+                </div>
+                <div class="estadistica">
+                    <h3>Días de uso</h3>
+                    <div class="grafica"></div>
+                </div>
+            </section>
+            <section id="buscar-amigos" class="hidden">
+                <form action="">
+                    <label for="buscarAmigoInput">Busca a tus amigos</label>
+                    <input id="buscarAmigoInput" type="text" placeholder="Escribe su nombre">
+                    <button type="submit">Buscar</button>
+                </form>
+                <div class="resultado">
+                    <h3>Resultados:</h3>
+                </div>
+            </section>
+            <section id="contenedor-mundo_1" class="hidden">
+                <div class="encabesado-niveles">
+                    <p id="nivel">Nivel1</p>
+                    <p id="titulo-nivel">¿Qué es el ahorro?</p>
+                </div>
+                <div class="camino-niveles">
+                    <div id="nivel1" class="nivel"></div>
+                    <div id="linea1" class="line"></div>
+                    <div id="nivel2" class="nivel"></div>
+                    <div id="linea2" class="line"></div>
+                    <div id="nivel3" class="nivel"></div>
+                    <div id="linea3" class="line"></div>
+                    <div id="nivel4" class="nivel"></div>
+                    <div id="linea4" class="line"></div>
+                    <div id="nivel5" class="nivel"></div>
+                </div>
+            </section>
+            <section id="contenedor-mundo_2" class="hidden"></section>
+            <section id="contenedor-mundo_3" class="hidden"></section>
+            <footer>
+                <nav>
+                    <ul>
+                        <li id="inicio">
+                            <svg id="btn-inicio" version="1.0" xmlns="http://www.w3.org/2000/svg"
+                            width="512.000000pt" height="512.000000pt" viewBox="0 0 512.000000 512.000000"
+                            preserveAspectRatio="xMidYMid meet">
+
+                            <g id="btn-inicio-fill" transform="translate(0.000000,512.000000) scale(0.100000,-0.100000)"
+                            fill="#FC850E" stroke="none">
+                            <path d="M2005 5101 c-54 -25 -77 -53 -115 -141 -160 -369 -441 -811 -723
+                            -1137 -52 -59 -153 -165 -225 -234 -141 -138 -154 -160 -128 -222 24 -58 52
+                            -70 154 -65 111 6 157 26 252 112 63 56 110 82 110 60 0 -17 -240 -343 -350
+                            -474 -130 -156 -289 -326 -395 -422 -60 -54 -118 -111 -127 -126 -22 -34 -23
+                            -103 -3 -143 28 -53 68 -69 173 -69 154 0 231 34 371 165 70 65 84 74 101 65
+                            11 -6 20 -18 20 -26 0 -29 -223 -336 -407 -561 -184 -225 -371 -425 -553 -590
+                            -122 -112 -160 -164 -160 -222 1 -80 65 -164 136 -177 20 -4 84 -4 142 -1 179
+                            8 271 53 440 212 77 72 96 86 116 81 34 -8 38 -29 16 -78 -37 -81 -17 -156 52
+                            -198 27 -16 51 -20 128 -20 54 0 122 7 155 15 116 31 221 107 290 211 51 76
+                            71 71 67 -16 -2 -36 1 -77 7 -91 17 -45 71 -98 112 -110 21 -7 39 -17 39 -23
+                            -1 -28 -41 -289 -54 -354 -21 -99 -20 -126 7 -158 23 -26 30 -28 158 -36 74
+                            -5 249 -8 390 -5 281 5 294 7 319 68 10 24 10 45 -5 117 -17 88 -44 257 -45
+                            279 0 9 7 10 26 3 14 -6 47 -10 73 -10 113 0 219 37 298 105 41 35 43 36 83
+                            24 32 -10 46 -21 60 -50 13 -25 34 -44 65 -59 25 -12 45 -26 45 -30 0 -26 -23
+                            -179 -41 -267 -18 -94 -19 -104 -4 -132 9 -18 27 -34 43 -38 36 -10 589 -10
+                            624 0 42 11 61 56 48 114 -13 55 -50 290 -50 315 0 9 18 25 44 37 27 14 50 34
+                            62 56 18 33 21 35 74 35 46 0 64 -6 105 -33 80 -53 131 -69 235 -74 84 -4 99
+                            -2 128 17 18 11 40 37 49 58 14 34 14 41 -1 83 -21 61 -20 76 5 84 16 5 38
+                            -10 108 -78 129 -124 229 -167 390 -167 109 0 168 44 178 132 8 66 -14 101
+                            -123 198 -173 154 -423 434 -611 685 -132 176 -176 243 -169 260 11 28 40 15
+                            107 -50 89 -87 156 -117 268 -123 100 -6 140 10 166 65 32 66 19 88 -142 245
+                            -190 186 -356 381 -512 602 -78 111 -70 133 19 51 79 -73 132 -96 221 -98 62
+                            -2 71 0 96 25 19 20 27 38 27 63 0 31 -14 49 -150 187 -216 219 -362 408 -528
+                            683 -74 123 -226 420 -226 443 0 21 -69 70 -109 77 -32 5 -51 2 -84 -14 -42
+                            -21 -47 -28 -150 -234 -58 -116 -112 -221 -120 -232 -15 -20 -15 -20 -38 0
+                            -43 39 -226 265 -320 397 -185 259 -345 534 -455 777 -64 143 -73 157 -129
+                            182 -51 24 -99 24 -150 0z m876 -1637 c14 -13 16 -21 8 -35 -5 -11 -13 -19
+                            -17 -19 -8 0 -42 53 -42 64 0 12 34 5 51 -10z"/>
+                            </g>
+                            </svg>
+                        </li>
+                        <li id="tienda">
+                            <svg id="btn-tienda" version="1.0" xmlns="http://www.w3.org/2000/svg"
+                            width="512.000000pt" height="512.000000pt" viewBox="0 0 512.000000 512.000000"
+                            preserveAspectRatio="xMidYMid meet">
+
+                            <g id="btn-tienda-fill" transform="translate(0.000000,512.000000) scale(0.100000,-0.100000)"
+                            fill="#000000" stroke="none">
+                            <path d="M1079 4831 c-64 -20 -128 -62 -181 -118 -27 -29 -545 -885 -618
+                            -1022 -19 -36 -14 -543 6 -630 36 -157 160 -313 304 -383 99 -48 166 -63 275
+                            -61 138 1 256 46 372 140 l43 34 57 -44 c114 -88 229 -130 363 -131 47 0 110
+                            6 140 13 82 20 188 74 245 125 l50 44 35 -33 c100 -96 241 -149 395 -148 150
+                            1 286 53 385 148 l35 33 49 -44 c58 -50 166 -106 246 -125 30 -7 96 -13 145
+                            -12 138 1 256 46 372 140 l43 34 57 -44 c114 -88 229 -130 363 -131 103 0 171
+                            15 269 61 97 46 202 149 254 249 59 115 66 163 67 472 2 270 1 272 -22 315
+                            -14 23 -147 249 -297 502 -278 470 -320 529 -406 579 -100 59 -19 56 -1569 55
+                            -1337 0 -1424 -1 -1477 -18z"/>
+                            <path d="M1195 2480 c-120 -58 -198 -75 -345 -75 -131 1 -231 21 -323 65 -22
+                            11 -42 20 -44 20 -2 0 -3 -427 -3 -949 0 -918 1 -951 20 -1012 35 -115 132
+                            -211 243 -244 36 -11 97 -15 214 -15 l163 0 0 578 c0 644 -1 632 67 712 21 24
+                            60 53 87 66 l51 24 1235 0 1235 0 51 -24 c27 -13 66 -42 87 -66 68 -80 67 -68
+                            67 -712 l0 -578 163 0 c117 0 178 4 214 15 111 33 208 129 243 244 19 61 20
+                            94 20 1011 l0 949 -58 -24 c-116 -47 -180 -59 -317 -59 -151 0 -216 14 -342
+                            74 l-81 40 -84 -39 c-130 -61 -193 -75 -343 -75 -151 0 -215 14 -346 76 l-87
+                            40 -43 -25 c-72 -41 -185 -77 -285 -89 -157 -20 -344 15 -473 89 l-43 25 -87
+                            -40 c-131 -62 -195 -76 -346 -76 -151 0 -216 14 -342 75 -45 21 -83 39 -85 38
+                            -2 0 -39 -18 -83 -39z"/>
+                            <path d="M1440 800 l0 -530 480 0 480 0 0 530 0 530 -480 0 -480 0 0 -530z"/>
+                            <path d="M2720 800 l0 -530 480 0 480 0 0 530 0 530 -480 0 -480 0 0 -530z"/>
+                            </g>
+                            </svg>
+                        </li>
+                        <li id="analisis">
+                            <svg id="btn-analisis" version="1.0" xmlns="http://www.w3.org/2000/svg"
+                            width="512.000000pt" height="512.000000pt" viewBox="0 0 512.000000 512.000000"
+                            preserveAspectRatio="xMidYMid meet">
+
+                            <g id="btn-analisis-fill" transform="translate(0.000000,512.000000) scale(0.100000,-0.100000)"
+                            fill="#000000" stroke="none">
+                            <path d="M3693 4850 c-389 -6 -376 -3 -421 -93 -30 -59 -23 -113 20 -163 46
+                            -52 63 -58 192 -64 l120 -5 -410 -343 -409 -343 -175 180 c-143 147 -182 182
+                            -215 191 -83 24 -72 32 -789 -565 -391 -326 -671 -567 -681 -584 -23 -45 -20
+                            -121 8 -161 49 -73 152 -92 224 -42 36 24 205 164 953 786 l235 195 180 -184
+                            c157 -161 185 -185 218 -191 79 -14 92 -4 628 442 280 233 511 424 514 424 3
+                            0 5 -66 5 -147 0 -122 4 -155 19 -189 45 -100 160 -129 245 -63 53 42 54 46
+                            56 434 1 198 2 368 1 377 -2 34 -69 95 -116 107 -24 6 -47 10 -52 9 -4 -1
+                            -162 -5 -350 -8z"/>
+                            <path d="M3552 3553 c-18 -9 -43 -30 -55 -47 l-22 -31 -3 -1336 -2 -1336 22
+                            -34 c13 -19 43 -44 68 -57 l45 -23 460 3 c443 3 461 4 495 24 19 11 45 38 57
+                            60 l23 39 -3 1327 -2 1327 -21 28 c-11 15 -36 38 -54 51 l-33 22 -471 0 c-413
+                            0 -475 -2 -504 -17z"/>
+                            <path d="M2056 2697 c-22 -12 -49 -38 -60 -57 -21 -34 -21 -48 -24 -900 -2
+                            -476 0 -884 3 -908 8 -55 62 -117 113 -132 49 -13 895 -13 944 0 51 15 105 77
+                            113 132 3 24 5 432 3 908 -3 852 -3 866 -24 900 -11 19 -38 45 -60 57 -39 23
+                            -41 23 -504 23 -463 0 -465 0 -504 -23z"/>
+                            <path d="M575 2066 c-37 -17 -70 -52 -84 -89 -7 -19 -11 -218 -11 -595 l0
+                            -567 23 -39 c12 -22 38 -49 57 -60 34 -20 52 -21 495 -24 l460 -3 45 23 c25
+                            13 55 38 67 57 l23 34 0 582 0 582 -22 33 c-13 18 -36 43 -51 54 -28 21 -39
+                            21 -500 23 -378 2 -478 0 -502 -11z"/>
+                            <path d="M360 568 c-66 -34 -93 -79 -88 -149 5 -65 32 -109 82 -133 31 -15
+                            223 -16 2206 -16 1983 0 2175 1 2206 16 50 24 77 68 82 133 5 70 -22 115 -88
+                            149 l-44 22 -2156 0 -2156 0 -44 -22z"/>
+                            </g>
+                            </svg>
+                        </li>
+                        <li id="perfil">
+                            <svg id="btn-perfil" version="1.0" xmlns="http://www.w3.org/2000/svg"
+                            width="512.000000pt" height="512.000000pt" viewBox="0 0 512.000000 512.000000"
+                            preserveAspectRatio="xMidYMid meet">
+
+                            <g id="btn-perfil-fill"  transform="translate(0.000000,512.000000) scale(0.100000,-0.100000)"
+                            fill="#000000" stroke="none">
+                            <path d="M848 5055 c-80 -45 -173 -280 -238 -605 -52 -259 -64 -380 -64 -680
+                            -1 -282 7 -393 46 -615 37 -217 38 -202 -35 -355 -59 -122 -102 -226 -182
+                            -438 -36 -96 -60 -123 -142 -157 -144 -59 -183 -95 -183 -166 0 -17 13 -71 30
+                            -120 123 -369 421 -708 964 -1099 421 -302 965 -612 1261 -717 263 -94 405
+                            -68 850 152 563 279 1218 738 1509 1058 211 232 356 482 397 684 11 55 11 67
+                            -4 98 -14 30 -33 44 -133 92 -69 34 -123 67 -133 83 -10 14 -57 124 -106 245
+                            -48 121 -109 264 -136 317 -27 54 -49 110 -49 126 0 15 13 106 29 202 44 264
+                            54 406 48 692 -7 336 -40 561 -127 848 -84 280 -145 370 -247 370 -42 0 -115
+                            -47 -242 -155 -329 -277 -663 -616 -940 -952 -23 -29 -49 -53 -56 -53 -7 0
+                            -27 28 -45 63 -152 287 -444 509 -529 401 -35 -45 -24 -113 45 -281 34 -83 43
+                            -136 24 -148 -17 -11 -37 12 -85 100 -63 115 -129 201 -179 230 -56 33 -89 32
+                            -116 -2 -21 -26 -22 -35 -16 -123 3 -52 9 -114 12 -137 4 -24 3 -43 -2 -43 -5
+                            0 -38 39 -74 87 -207 275 -734 795 -975 962 -72 49 -132 62 -177 36z m265
+                            -691 c80 -41 275 -225 406 -383 65 -79 76 -115 44 -143 -10 -9 -49 -37 -88
+                            -63 -115 -79 -205 -148 -304 -235 -52 -44 -101 -80 -110 -78 -38 7 -74 307
+                            -75 623 -1 203 1 234 17 263 20 37 57 43 110 16z m3004 -16 c34 -64 28 -447
+                            -13 -728 -16 -114 -30 -160 -48 -160 -7 0 -41 26 -77 58 -100 89 -192 160
+                            -318 248 -145 101 -146 105 -65 211 109 142 313 334 409 386 17 9 45 16 62 17
+                            27 0 36 -6 50 -32z m-2624 -1995 c330 -73 675 -394 841 -782 20 -44 58 -146
+                            85 -226 72 -207 83 -225 146 -225 43 0 79 48 110 147 111 348 225 556 414 755
+                            218 230 471 351 731 351 222 0 342 -53 674 -301 54 -40 122 -85 150 -99 75
+                            -37 96 -60 96 -102 0 -98 -202 -342 -461 -558 -462 -385 -1215 -838 -1592
+                            -959 -136 -43 -214 -28 -481 93 -411 186 -1061 608 -1442 936 -225 194 -383
+                            397 -384 494 0 37 17 53 139 124 47 27 137 89 200 136 145 110 244 167 346
+                            199 146 45 278 51 428 17z"/>
+                            <path d="M1650 1744 c-141 -61 -186 -265 -87 -396 58 -76 135 -105 217 -84
+                            107 28 172 120 172 244 0 78 -16 123 -61 175 -62 70 -162 95 -241 61z"/>
+                            <path d="M3302 1734 c-177 -88 -174 -368 5 -458 44 -22 135 -21 181 3 46 24
+                            73 53 102 110 64 128 17 286 -102 345 -67 33 -119 33 -186 0z"/>
+                            <path d="M2490 998 c-82 -23 -126 -86 -118 -170 14 -141 178 -221 290 -142 65
+                            45 90 95 85 171 -2 53 -7 67 -32 93 -48 50 -145 71 -225 48z"/>
+                            </g>
+                            </svg>
+
+                        </li>
+                    </ul>
+                </nav>
+            </footer>
+            
+
         </section>
     </main>
     <script src="/src/main.js"></script>

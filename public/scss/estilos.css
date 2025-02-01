@@ -51,15 +51,13 @@ html {
       transform: scale(1.2); /* Vuelve al tamaño pequeño al final */
     }
   }
-  body main {
-    background-color: var(--colorSecundario);
-  }
   body main #login {
     width: 100%;
     height: 100vh;
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: repeat(2, 1fr);
+    background-color: var(--colorSecundario);
   }
   body main #login .logo_conteiner {
     width: 100%;
@@ -213,5 +211,615 @@ html {
   body main #iniciar-sesion .form-conteiner p {
     position: relative;
     bottom: 0;
+  }
+  body main #plataforma header {
+    position: fixed;
+    width: 100%;
+    height: 72px;
+    background-color: #FFFFFF;
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+  }
+  body main #plataforma header nav {
+    width: 90%;
+    margin: 0 auto;
+    height: 100%;
+  }
+  body main #plataforma header nav ul {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    list-style: none;
+  }
+  body main #plataforma header nav ul .user_name {
+    font-weight: bold;
+    opacity: 0.5;
+    font-size: 16px;
+  }
+  body main #plataforma header nav ul .racha {
+    position: relative;
+  }
+  body main #plataforma header nav ul .racha span {
+    display: flex;
+    width: 28px;
+    height: 24px;
+    background-image: url(/public/asset/img/racha.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  body main #plataforma header nav ul .racha div {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: -10px;
+    right: -10px;
+    width: 20px;
+    height: 20px;
+    background-color: #9ccc65;
+    border-radius: 100%;
+    font-size: 12px;
+    font-weight: 500;
+    color: #FFFFFF;
+  }
+  body main #plataforma header nav ul .monedas {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+  }
+  body main #plataforma header nav ul .monedas span {
+    display: flex;
+    width: 30px;
+    height: 30px;
+    background-image: url(/public/asset/img/savvycoins.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  body main #plataforma header nav ul .monedas p {
+    font-size: 20px;
+    font-weight: 500;
+    color: #FFEC27;
+  }
+  body main #plataforma header nav ul .experiencia {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+  }
+  body main #plataforma header nav ul .experiencia span {
+    display: flex;
+    width: 30px;
+    height: 30px;
+    background-image: url(/public/asset/img/hojas.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  body main #plataforma header nav ul .experiencia p {
+    font-size: 20px;
+    font-weight: 500;
+    color: #9ccc65;
+  }
+  body main #plataforma #contenedor-temarios {
+    width: 100%;
+    height: auto;
+    position: relative;
+    top: 72px;
+    padding: 24px;
+  }
+  body main #plataforma #contenedor-temarios h2 {
+    width: 60%;
+    font-size: 16px;
+    opacity: 0.5;
+    margin-top: 20px;
+    margin-bottom: 43px;
+  }
+  body main #plataforma #contenedor-temarios .contenedor-temarios_mundos {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(3, 1fr);
+    gap: 35px;
+    margin-bottom: 60px;
+  }
+  body main #plataforma #contenedor-temarios .contenedor-temarios_mundos #mundo_ahorro {
+    width: 100%;
+    height: 190px;
+    background-image: url(/public/asset/img/mundo-del-ahorro.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 16px;
+  }
+  body main #plataforma #contenedor-temarios .contenedor-temarios_mundos #mundo_ahorro button {
+    position: relative;
+    top: 110px;
+    width: 88px;
+    height: 32px;
+    font-size: 12px;
+    font-weight: bolder;
+    color: white;
+    background-color: var(--colorPrincipal);
+    border-radius: 8px;
+    border: none;
+  }
+  body main #plataforma #contenedor-temarios .contenedor-temarios_mundos #mundo_presupuesto {
+    width: 100%;
+    height: 190px;
+    background-image: url(/public/asset/img/aldea-del-presupuesto.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 16px;
+  }
+  body main #plataforma #contenedor-temarios .contenedor-temarios_mundos #mundo_presupuesto div {
+    position: relative;
+    top: 0;
+    background-color: rgba(0, 0, 0, 0.207);
+    z-index: 1000;
+  }
+  body main #plataforma #contenedor-temarios .contenedor-temarios_mundos #mundo_presupuesto button {
+    position: relative;
+    top: 110px;
+    width: 88px;
+    height: 32px;
+    font-size: 12px;
+    font-weight: bolder;
+    color: white;
+    background-color: var(--colorPrincipal);
+    border-radius: 8px;
+    border: none;
+  }
+  body main #plataforma #contenedor-temarios .contenedor-temarios_mundos #mundo_inversiones {
+    width: 100%;
+    height: 190px;
+    background-image: url(/public/asset/img/mundo-de-las-inversiones.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 16px;
+  }
+  body main #plataforma #contenedor-temarios .contenedor-temarios_mundos #mundo_inversiones button {
+    position: relative;
+    top: 110px;
+    width: 88px;
+    height: 32px;
+    font-size: 12px;
+    font-weight: bolder;
+    color: white;
+    background-color: var(--colorPrincipal);
+    border-radius: 8px;
+    border: none;
+  }
+  body main #plataforma #contenedor-tienda {
+    width: 100%;
+    height: auto;
+    text-align: center;
+    position: relative;
+    top: 72px;
+    padding: 24px;
+  }
+  body main #plataforma #contenedor-tienda h2 {
+    font-size: 16px;
+    opacity: 0.5;
+    margin-top: 20px;
+    margin-bottom: 43px;
+  }
+  body main #plataforma #contenedor-tienda #articulos-tiendas {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 16px;
+    margin-bottom: 60px;
+  }
+  body main #plataforma #contenedor-tienda #articulos-tiendas article {
+    margin-bottom: 16px;
+    height: 180px;
+  }
+  body main #plataforma #contenedor-tienda #articulos-tiendas article div {
+    width: 125px;
+    height: 130px;
+    background-color: #999999;
+    border-radius: 24px;
+    margin-bottom: 12px;
+  }
+  body main #plataforma #contenedor-tienda #articulos-tiendas article h4 {
+    font-size: 12px;
+    opacity: 0.5;
+    margin-bottom: 8px;
+  }
+  body main #plataforma #contenedor-tienda #articulos-tiendas article .precio {
+    width: -moz-fit-content;
+    width: fit-content;
+    display: flex;
+    align-items: center;
+    height: 32px;
+    background-color: #FFFFFF;
+  }
+  body main #plataforma #contenedor-tienda #articulos-tiendas article .precio span {
+    display: flex;
+    width: 30px;
+    height: 30px;
+    background-image: url(/public/asset/img/savvycoins.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-right: 8px;
+  }
+  body main #plataforma #contenedor-tienda #articulos-tiendas article .precio p {
+    font-size: 12px;
+    font-weight: bold;
+    color: #FFEC27;
+  }
+  body main #plataforma #contenedor-rankings {
+    width: 100%;
+    height: auto;
+    position: relative;
+    top: 72px;
+    padding: 24px;
+  }
+  body main #plataforma #contenedor-rankings h2 {
+    font-size: 16px;
+    opacity: 0.5;
+    margin-top: 20px;
+    margin-bottom: 43px;
+  }
+  body main #plataforma #contenedor-rankings .contenedor-rankings {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    gap: 16px;
+    margin-bottom: 60px;
+  }
+  body main #plataforma #contenedor-rankings .contenedor-rankings article {
+    width: 100%;
+    height: 52px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #E5E5E5;
+    border-radius: 8px;
+    padding: 8px;
+  }
+  body main #plataforma #contenedor-rankings .contenedor-rankings article .usuario {
+    width: 60%;
+    display: flex;
+    align-items: center;
+  }
+  body main #plataforma #contenedor-rankings .contenedor-rankings article .usuario img {
+    height: 35px;
+  }
+  body main #plataforma #contenedor-rankings .contenedor-rankings article .usuario h4 {
+    font-size: 12px;
+    font-weight: bold;
+    opacity: 0.5;
+  }
+  body main #plataforma #contenedor-rankings .contenedor-rankings article p {
+    font-size: 12px;
+    font-weight: bold;
+    opacity: 0.8;
+  }
+  body main #plataforma #contenedor-perfil {
+    width: 100%;
+    height: auto;
+  }
+  body main #plataforma #contenedor-perfil .perfil-usuario {
+    width: 100%;
+    height: 180px;
+    display: flex;
+    align-items: center;
+    background-image: url(/public/asset/img/fondo_perfil.avif);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding: 16px;
+  }
+  body main #plataforma #contenedor-perfil .perfil-usuario h2 {
+    font-size: 20px;
+    font-weight: bold;
+    color: white;
+    margin-bottom: 8px;
+  }
+  body main #plataforma #contenedor-perfil .perfil-usuario img {
+    width: 80px;
+    height: 80px;
+    border-radius: 100%;
+    background-color: rgba(255, 255, 255, 0.5764705882);
+    margin-right: 16px;
+  }
+  body main #plataforma #contenedor-perfil .perfil-usuario .perfil_puntos {
+    width: 110%;
+    display: flex;
+    justify-content: space-between;
+  }
+  body main #plataforma #contenedor-perfil .perfil-usuario .perfil_puntos .perfil_monedas {
+    display: flex;
+    width: 30px;
+    height: 30px;
+    background-image: url(/public/asset/img/savvycoins.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  body main #plataforma #contenedor-perfil .perfil-usuario .perfil_puntos p {
+    font-size: 20px;
+    font-weight: 500;
+    color: #FFEC27;
+  }
+  body main #plataforma #contenedor-perfil .perfil-usuario .perfil_puntos .perfil_experiencia {
+    display: flex;
+    width: 30px;
+    height: 30px;
+    background-image: url(/public/asset/img/hojas.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  body main #plataforma #contenedor-perfil .perfil-usuario .perfil_puntos .puntos_experiencia {
+    font-size: 20px;
+    font-weight: 500;
+    color: #9ccc65;
+  }
+  body main #plataforma #contenedor-perfil .amigos {
+    width: 100%;
+    height: 80px;
+    padding: 16px;
+  }
+  body main #plataforma #contenedor-perfil .amigos h3 {
+    opacity: 0.5;
+  }
+  body main #plataforma #contenedor-perfil .amigos .agregarAmigo {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  body main #plataforma #contenedor-perfil .amigos .agregarAmigo p {
+    font-family: 12px;
+    font-weight: 700;
+    opacity: 0.5;
+  }
+  body main #plataforma #contenedor-perfil .amigos .agregarAmigo button {
+    width: 142px;
+    height: 40px;
+    padding: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid var(--colorPrincipal);
+    border-radius: 8px;
+    background-color: transparent;
+    font-size: 12px;
+    font-weight: bold;
+    color: var(--colorPrincipal);
+  }
+  body main #plataforma #contenedor-perfil .amigos .agregarAmigo button span {
+    display: flex;
+    width: 24px;
+    height: 24px;
+    background-image: url(/public/asset/icon/user.svg);
+    margin-right: 4px;
+  }
+  body main #plataforma #contenedor-perfil .logros {
+    width: 100%;
+    height: auto;
+    padding: 16px;
+    margin-bottom: 16px;
+  }
+  body main #plataforma #contenedor-perfil .logros h3 {
+    margin-bottom: 8px;
+    opacity: 0.5;
+  }
+  body main #plataforma #contenedor-perfil .logros .logros-usuario {
+    display: flex;
+    gap: 16px;
+    overflow: scroll;
+  }
+  body main #plataforma #contenedor-perfil .logros .logros-usuario article {
+    width: 125px;
+    height: 130px;
+    flex-shrink: 0;
+    background-color: #999999;
+    border-radius: 8px;
+  }
+  body main #plataforma #contenedor-perfil .estadistica {
+    width: 100%;
+    height: auto;
+    padding: 16px;
+    margin-bottom: 60px;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    justify-items: center;
+  }
+  body main #plataforma #contenedor-perfil .estadistica h3 {
+    opacity: 0.5;
+  }
+  body main #plataforma #contenedor-perfil .estadistica .grafica {
+    width: 300px;
+    height: 245px;
+  }
+  body main #plataforma #buscar-amigos {
+    width: 100%;
+    height: 100vh;
+    padding: 16px;
+  }
+  body main #plataforma #buscar-amigos form {
+    display: flex;
+    flex-direction: column;
+  }
+  body main #plataforma #buscar-amigos form label {
+    font-size: 24px;
+    font-weight: 500;
+    opacity: 0.5;
+    text-align: center;
+    margin-bottom: 16px;
+  }
+  body main #plataforma #buscar-amigos form input {
+    width: 100%;
+    height: 40px;
+    padding: 8px;
+    border: 2px solid var(--colorFont);
+    border-radius: 8px;
+    margin-bottom: 16px;
+  }
+  body main #plataforma #buscar-amigos form input:focus {
+    border-color: var(--colorPrincipal);
+    outline: none;
+  }
+  body main #plataforma #buscar-amigos form button {
+    width: 100%;
+    height: 40px;
+    color: white;
+    font-size: 16px;
+    font-weight: 500;
+    border-radius: 8px;
+    background-color: var(--colorPrincipal);
+    border: none;
+  }
+  body main #plataforma #buscar-amigos .resultado {
+    width: 100%;
+    height: auto;
+    padding: 16px;
+  }
+  body main #plataforma #buscar-amigos .resultado h3 {
+    opacity: 0.5;
+  }
+  body main #plataforma #contenedor-mundo_1 {
+    width: 100%;
+    height: 650px;
+    position: relative;
+    top: 72px;
+    padding: 24px;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 80px 1fr;
+    justify-items: center;
+    gap: 24px;
+    margin-bottom: 60px;
+    overflow-y: auto;
+  }
+  body main #plataforma #contenedor-mundo_1 .encabesado-niveles {
+    width: 100%;
+    height: 74px;
+    background-color: #ADDDF3;
+    color: white;
+    border-radius: 8px;
+    padding: 16px;
+    margin-bottom: 40px;
+  }
+  body main #plataforma #contenedor-mundo_1 .encabesado-niveles #nivel {
+    font-size: 16px;
+    font-weight: bold;
+    opacity: 0.5;
+  }
+  body main #plataforma #contenedor-mundo_1 .encabesado-niveles #titulo-nivel {
+    font-weight: 500;
+  }
+  body main #plataforma #contenedor-mundo_1 .camino-niveles {
+    width: 265px;
+    height: auto;
+    position: relative;
+  }
+  body main #plataforma #contenedor-mundo_1 .camino-niveles .nivel {
+    position: absolute;
+    width: 90px;
+    height: 90px;
+    border-radius: 100%;
+    background-color: #D9D9D9;
+    z-index: 1000;
+  }
+  body main #plataforma #contenedor-mundo_1 .camino-niveles .line {
+    position: absolute;
+    width: 110px;
+    height: 1px;
+    background-color: #D9D9D9;
+  }
+  body main #plataforma #contenedor-mundo_1 .camino-niveles #nivel1 {
+    background-color: #ADDDF3;
+    right: 40%;
+  }
+  body main #plataforma #contenedor-mundo_1 .camino-niveles #nivel2 {
+    top: 100px;
+    right: 0;
+  }
+  body main #plataforma #contenedor-mundo_1 .camino-niveles #nivel3 {
+    top: 150px;
+    left: 0;
+  }
+  body main #plataforma #contenedor-mundo_1 .camino-niveles #nivel4 {
+    right: 0;
+    top: 250px;
+  }
+  body main #plataforma #contenedor-mundo_1 .camino-niveles #nivel5 {
+    left: 0;
+    top: 350px;
+  }
+  body main #plataforma #contenedor-mundo_1 .camino-niveles #linea1 {
+    width: 70px;
+    right: 60px;
+    top: 100px;
+    transform: rotate(45deg);
+  }
+  body main #plataforma #contenedor-mundo_1 .camino-niveles #linea2 {
+    width: 100px;
+    left: 80px;
+    top: 170px;
+    transform: rotate(170deg);
+  }
+  body main #plataforma #contenedor-mundo_1 .camino-niveles #linea3 {
+    width: 120px;
+    top: 250px;
+    left: 25%;
+    transform: rotate(35deg);
+  }
+  body main #plataforma #contenedor-mundo_1 .camino-niveles #linea4 {
+    width: 135px;
+    top: 350px;
+    left: 80px;
+    transform: rotate(155deg);
+  }
+  body main #plataforma footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 72px;
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.1);
+    background-color: #FFFFFF;
+    z-index: 1000;
+  }
+  body main #plataforma footer nav {
+    width: 90%;
+    margin: 0 auto;
+    height: 100%;
+  }
+  body main #plataforma footer nav ul {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    list-style: none;
+  }
+  body main #plataforma footer nav ul #inicio #btn-inicio {
+    width: 32px;
+    height: 32px;
+  }
+  body main #plataforma footer nav ul #tienda #btn-tienda {
+    width: 32px;
+    height: 32px;
+  }
+  body main #plataforma footer nav ul #analisis #btn-analisis {
+    width: 32px;
+    height: 32px;
+  }
+  body main #plataforma footer nav ul #perfil #btn-perfil {
+    width: 32px;
+    height: 32px;
   }
 }/*# sourceMappingURL=estilos.css.map */
