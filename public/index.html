@@ -4,20 +4,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Foxsavvy</title>
-    <link rel="stylesheet" href="/public/scss/estilos.css">
+    <link rel="stylesheet" href="scss/estilos.css">
     <link rel="shortcut icon" href="/public/asset/icon/foxsavvy2.ico" type="image/x-icon">
     <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
 </head>
 <body>
     <header></header>
     <section id="splashScreen" class="">
-        <img src="/public/asset/icon/foxsavvy2.svg" alt="Logo de FoxSavvy">
+        <img src="asset/icon/foxsavvy2.svg" alt="Logo de FoxSavvy">
         <h1>Foxsavvy</h1>
     </section>
     <main id="contenido-principal" class="hidden">
         <section id="login" class="">
             <div class="logo_conteiner">
-                <img src="/public/asset/icon/foxsavvy1.svg" alt="logo de foxsavvy">
+                <img src="asset/icon/foxsavvy1.svg" alt="logo de foxsavvy">
             </div>
             <div class="login-info_conteiner">
                 <p>¡Hola! Por favor, ingresa tu nombre y tu contraseña para continuar aprendiendo</p>
@@ -26,7 +26,7 @@
             </div>
         </section>
         <section id="crear-cuenta" class="hidden">
-            <img src="/public/asset/icon/foxsavvy1.svg" alt="">
+            <img src="asset/icon/foxsavvy1.svg" alt="">
             <div class="form-conteiner"> 
                 <h2>Crear Cuenta</h2>
                 <form id="signup-form">
@@ -160,7 +160,7 @@
                 <div class="contenedor-rankings">
                     <article>
                         <div class="usuario">
-                            <img src="/public/asset/img/savvycoins.svg" alt="">
+                            <img src="asset/img/savvycoins.svg" alt="">
                             <h4>Emmanuel Herrera</h4>
                         </div>
                         
@@ -242,7 +242,7 @@
             </section>
             <section id="contenedor-perfil" class="hidden">
                 <article class="perfil-usuario">
-                    <img src="/public/asset/img/racha.png" alt="">
+                    <img src="asset/img/racha.png" alt="">
                     <div class="perfil_usuario">
                         <h2>Emmanuel H</h2>
                         <div class="perfil_puntos">
@@ -295,20 +295,52 @@
                     <p id="titulo-nivel">¿Qué es el ahorro?</p>
                 </div>
                 <div class="camino-niveles">
-                    <div id="nivel1" class="nivel"></div>
+                    <div id="nivel1" class="nivel"><span></span></div>
                     <div id="linea1" class="line"></div>
-                    <div id="nivel2" class="nivel"></div>
+                    <div id="nivel2" class="nivel">
+                        <span></span>
+                    </div>
                     <div id="linea2" class="line"></div>
-                    <div id="nivel3" class="nivel"></div>
+                    <div id="nivel3" class="nivel"><span></span></div>
                     <div id="linea3" class="line"></div>
-                    <div id="nivel4" class="nivel"></div>
+                    <div id="nivel4" class="nivel"><span></span></div>
                     <div id="linea4" class="line"></div>
-                    <div id="nivel5" class="nivel"></div>
+                    <div id="nivel5" class="nivel"><span></span></div>
                 </div>
             </section>
             <section id="contenedor-mundo_2" class="hidden"></section>
             <section id="contenedor-mundo_3" class="hidden"></section>
-            <footer>
+            <section id="contenedor-cuentos" class="hidden">
+                <span id="btn-salir-cuento"></span>
+                <h2 id="nombre-cuento"></h2>
+                <div id="imagen-cuento"></div>
+                <div class="desplazarme">
+                    <button id="haciaTras"><span></span></button>
+                    <button id="haciaDelante"><span></span></button>
+                </div>
+            </section>
+            <section id="contenedor-quizzes" class="hidden">
+                <div class="header-contenedor_quiz">
+                    <span></span>
+                    <div class="barraProgreso"></div>
+                </div>
+                <div class="titulo-quizz">
+                    <h3 id="Pregunta"></h3>
+                    <img src="" alt="">
+                </div>
+                <div class="contenedor-respuestas">
+                    <button id="respuesta1"></button>
+                    <button id="respuesta2"></button>
+                    <button id="respuesta3"></button>
+                    <button id="respuesta4"></button>
+                </div>
+                <button id="siguientePregunta"></button>
+            </section>
+
+
+
+
+            <footer id="footer_plataforma">
                 <nav>
                     <ul>
                         <li id="inicio">

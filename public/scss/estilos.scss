@@ -246,7 +246,7 @@ html{
                                     display: flex;
                                     width: 28px;
                                     height: 24px;
-                                    background-image: url(/public/asset/img/racha.png);
+                                    background-image: url(../asset/img/racha.png);
                                     background-position: center;
                                     background-repeat: no-repeat;
                                     background-size: cover;
@@ -275,7 +275,7 @@ html{
                                     display: flex;
                                     width: 30px;
                                     height: 30px;
-                                    background-image: url(/public/asset/img/savvycoins.svg);
+                                    background-image: url(../asset/img/savvycoins.svg);
                                     background-position: center;
                                     background-repeat: no-repeat;
                                     background-size: cover;
@@ -294,7 +294,7 @@ html{
                                     display: flex;
                                     width: 30px;
                                     height: 30px;
-                                    background-image: url(/public/asset/img/hojas.png);
+                                    background-image: url(../asset/img/hojas.png);
                                     background-position: center;
                                     background-repeat: no-repeat;
                                     background-size: cover;
@@ -327,11 +327,13 @@ html{
                         grid-template-columns: 1fr;
                         grid-template-rows: repeat(3, 1fr);
                         gap: 35px;
+                        align-items: center;
+                        justify-items: center;
                         margin-bottom: 60px;
                         #mundo_ahorro{
-                            width: 100%;
+                           width: 328px;
                             height: 190px;
-                            background-image: url(/public/asset/img/mundo-del-ahorro.svg);
+                            background-image: url(../asset/img/mundo-del-ahorro.svg);
                             background-position: center;
                             background-repeat: no-repeat;
                             background-size: cover;
@@ -350,9 +352,9 @@ html{
                             }
                         }
                         #mundo_presupuesto{
-                            width: 100%;
+                            width: 328px;
                             height: 190px;
-                            background-image: url(/public/asset/img/aldea-del-presupuesto.svg);
+                            background-image: url(../asset/img/aldea-del-presupuesto.svg);
                             background-position: center;
                             background-repeat: no-repeat;
                             background-size: cover;
@@ -378,9 +380,9 @@ html{
                             }
                         }
                         #mundo_inversiones{
-                            width: 100%;
+                            width: 328px;
                             height: 190px;
-                            background-image: url(/public/asset/img/mundo-de-las-inversiones.svg);
+                            background-image: url(../asset/img/mundo-de-las-inversiones.svg);
                             background-position: center;
                             background-repeat: no-repeat;
                             background-size: cover;
@@ -446,7 +448,7 @@ html{
                                     display: flex;
                                     width: 30px;
                                     height: 30px;
-                                    background-image: url(/public/asset/img/savvycoins.svg);
+                                    background-image: url(../asset/img/savvycoins.svg);
                                     background-position: center;
                                     background-repeat: no-repeat;
                                     background-size: cover;
@@ -519,7 +521,7 @@ html{
                         height: 180px;
                         display: flex;
                         align-items: center;
-                        background-image: url(/public/asset/img/fondo_perfil.avif);
+                        background-image: url(../asset/img/fondo_perfil.avif);
                         background-position: center;
                         background-size:cover ;
                         background-repeat: no-repeat;
@@ -545,7 +547,7 @@ html{
                                     display: flex;
                                     width: 30px;
                                     height: 30px;
-                                    background-image: url(/public/asset/img/savvycoins.svg);
+                                    background-image: url(../asset/img/savvycoins.svg);
                                     background-position: center;
                                     background-repeat: no-repeat;
                                     background-size: cover;
@@ -559,7 +561,7 @@ html{
                                 display: flex;
                                 width: 30px;
                                 height: 30px;
-                                background-image: url(/public/asset/img/hojas.png);
+                                background-image: url(../asset/img/hojas.png);
                                 background-position: center;
                                 background-repeat: no-repeat;
                                 background-size: cover;
@@ -605,7 +607,7 @@ html{
                                     display: flex;
                                     width: 24px;
                                     height: 24px;
-                                    background-image: url(/public/asset/icon/user.svg);
+                                    background-image: url(../asset/icon/user.svg);
                                     margin-right: 4px;
                                 }
                             }
@@ -739,6 +741,17 @@ html{
                             border-radius: 100%;
                             background-color: #D9D9D9;
                             z-index: 1000;
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            span{
+                                display: flex;
+                                width: 40px;
+                                height: 40px;
+                                background-position: center;
+                                background-repeat: no-repeat;
+                                background-size: cover;
+                            }
                         }
                         .line{
                             position: absolute;
@@ -749,22 +762,41 @@ html{
                         #nivel1{
                             background-color: #ADDDF3;
                             right:40%;
+                            span{
+                                background-image: url(../asset/icon/book.svg);
+                            }
                         }
                         #nivel2{
                             top: 100px;
                             right: 0;
+                            span{
+                                opacity: 0.5;
+                                background-image: url(../asset/icon/lock.svg);
+                            }
                         }
                         #nivel3{
                             top: 150px;
                             left: 0;
+                            span{
+                                opacity: 0.5;
+                                background-image: url(../asset/icon/lock.svg);
+                            }
                         }
                         #nivel4{
                             right: 0;
                             top: 250px;
+                            span{
+                                opacity: 0.5;
+                                background-image: url(../asset/icon/lock.svg);
+                            }
                         }
                         #nivel5{
                             left: 0;
                             top: 350px;
+                            span{
+                                opacity: 0.5;
+                                background-image: url(../asset/icon/lock.svg);
+                            }
                         }
                         #linea1{
                             width: 70px;
@@ -789,6 +821,81 @@ html{
                             top: 350px;
                             left: 80px;
                             transform: rotate(155deg);
+                        }
+                    }
+                }
+                #contenedor-cuentos{
+                    width: 100%;
+                    height: auto;
+                    padding: 24px;
+                    display: grid;
+                    grid-template-columns: 1fr;
+                    grid-template-rows: 48px 40px 422px 56px;
+                    gap: 16px;
+                    span{
+                        display: flex;
+                        width: 48px;
+                        height: 48px;
+                        background-image:url(../asset/icon/x.svg) ;
+                        background-position: center;
+                        background-repeat: no-repeat;
+                        background-size: cover;
+                    }
+                    h2{
+                        opacity: 0.5;
+                        text-align: center;
+                    }
+                    #imagen-cuento{
+                        width: 332px;
+                        height: 422px;
+                        border-radius: 16px;
+                        // background-color: #D9D9D9;
+                        // background-image: url(/public/asset/cuentos/mundo1/nivel1/Página1.svg);
+                        background-position: center;
+                        background-repeat: no-repeat;
+                        background-size: contain;
+                        border-radius: 16px;
+                    }
+                    .desplazarme{
+                        width: 100%;
+                        height: 56px;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        gap: 16px;
+                        button{
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            width: 60px;
+                            height: 60px;
+                            border-radius: 8px;
+                            border: none;
+                            background-color: var(--colorPrincipal);
+                            color: white;
+                            font-weight: 500;
+                        }
+                        #haciaTras{
+                            span{
+                                display: flex;
+                                width: 40px;
+                                height: 40px;
+                                background-image: url(../asset/icon/exit.svg);
+                                background-position: center;
+                                background-repeat: no-repeat;
+                                background-size: cover;
+                            }
+                        }
+                        #haciaDelante{
+                            span{
+                                display: flex;
+                                width: 40px;
+                                height: 40px;
+                                background-image: url(../asset/icon/next.svg);
+                                background-position: center;
+                                background-repeat: no-repeat;
+                                background-size: cover;
+                            }
                         }
                     }
                 }
