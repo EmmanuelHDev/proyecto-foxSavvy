@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Foxsavvy</title>
     <link rel="stylesheet" href="scss/estilos.css">
-    <link rel="shortcut icon" href="/public/asset/icon/foxsavvy2.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="asset/icon/foxsavvy2.ico" type="image/x-icon">
     <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
 </head>
 <body>
@@ -317,24 +317,28 @@
                 <div class="desplazarme">
                     <button id="haciaTras"><span></span></button>
                     <button id="haciaDelante"><span></span></button>
+                    <button id="ir-quizz" class="hidden">Ver el quizz</button>
                 </div>
             </section>
-            <section id="contenedor-quizzes" class="hidden">
-                <div class="header-contenedor_quiz">
-                    <span></span>
-                    <div class="barraProgreso"></div>
+            <section id="contenedor-quices" class="hidden">
+                <div class="contenedor-quiz">
+                    <div class="header-contenedor_quiz">
+                        <span></span>
+                        <div class="barraProgreso">
+                            <div id="barra"></div>
+                        </div>
+                    </div>
+                    <div class="titulo-quizz">
+                        <h3 id="Pregunta"></h3>
+                        <img src="" alt="">
+                    </div>
+                    <div class="contenedor-respuestas">
+                    </div>
+                    <button id="siguientePregunta">Siguiente</button>
                 </div>
-                <div class="titulo-quizz">
-                    <h3 id="Pregunta"></h3>
-                    <img src="" alt="">
+                <div id="validarRespuesta" class="hidden">
+                    <button id="btnVerificar"></button>
                 </div>
-                <div class="contenedor-respuestas">
-                    <button id="respuesta1"></button>
-                    <button id="respuesta2"></button>
-                    <button id="respuesta3"></button>
-                    <button id="respuesta4"></button>
-                </div>
-                <button id="siguientePregunta"></button>
             </section>
 
 
