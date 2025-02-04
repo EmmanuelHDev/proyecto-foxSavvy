@@ -182,7 +182,137 @@ btnMundo1.addEventListener('click', ()=>{
 //nivel 1
 const btnNivel1 = document.getElementById('nivel1');
 const sectionCuent0 = document.getElementById('contenedor-cuentos');
+//variable para entrar a la seccion de los quices 
+const contenedorQuices = document.getElementById('contenedor-quices');
 let nextPag =0;
+//------------------------------------------------------------------------//
+//funcion para acceder a los quices
+async function verQuices() {
+    try {
+        const respuesta = await fetch('asset/cuentos/mundo1/nivel1/quizz.json');
+        if (!respuesta.ok) {
+            throw new Error(`Error HTTP: ${respuesta.status}`);
+        }
+        const data = await respuesta.json();
+
+        const preguntaElemento = document.getElementById("Pregunta");
+        const contenedorRespuestas = document.querySelector(".contenedor-respuestas");
+        const btnSiguiente = document.getElementById("siguientePregunta");
+        const barraProgreso = document.querySelector("#barra");
+        const validarRespuesta = document.getElementById("validarRespuesta");
+        const contenedorquiz = document.querySelector(".contenedor-quiz");
+        let indicePregunta = 0;
+        let totalPreguntas = data.quizz.length;
+        let respuestasUsuario = [];
+
+        // Función para actualizar la barra de progreso
+        function actualizarProgreso() {
+            let progreso = ((indicePregunta + 1) / totalPreguntas) * 100;
+            requestAnimationFrame(() => {
+                barraProgreso.style.width = progreso + "%";
+            });
+        }
+
+        // Función para cargar una pregunta
+        function cargarPregunta() {
+            let preguntaActual = data.quizz[indicePregunta];
+
+            // Mostrar la pregunta
+            preguntaElemento.textContent = preguntaActual.pregunta;
+
+            // Limpiar respuestas anteriores
+            contenedorRespuestas.innerHTML = "";
+
+            // Crear botones de opciones
+            for (let clave in preguntaActual.opciones) {
+                let opcion = preguntaActual.opciones[clave];
+                let boton = document.createElement("button");
+                boton.classList.add("opcion");
+                boton.textContent = `${clave}) ${opcion}`;
+                boton.dataset.respuesta = clave; // Guardamos solo la letra (A, B, C)
+
+                boton.addEventListener("click", () => {
+                    document.querySelectorAll(".opcion").forEach(btn => btn.classList.remove("seleccionado"));
+                    boton.classList.add("seleccionado");
+
+                    // Guardar respuesta del usuario (la letra)
+                    respuestasUsuario[indicePregunta] = clave;
+
+                    // Habilitar botón de siguiente
+                    btnSiguiente.disabled = false;
+                });
+
+                contenedorRespuestas.appendChild(boton);
+            }
+
+            // Deshabilitar botón hasta que seleccione respuesta
+            btnSiguiente.disabled = true;
+
+            // Actualizar barra de progreso con animación
+            actualizarProgreso();
+        }
+
+        // Función para mostrar respuestas seleccionadas con la letra
+        function mostrarRespuestas() {
+            validarRespuesta.innerHTML = "<h3>Respuestas seleccionadas:</h3>";
+
+            data.quizz.forEach((pregunta, index) => {
+                let respuestaUsuario = respuestasUsuario[index] || "No respondida";
+
+                let respuestaHTML = `
+                    <div>
+                        <p id ="pregunta"><strong>${pregunta.pregunta}</strong></p>
+                        <p><strong>${respuestaUsuario}</strong></p>
+                        <hr>
+                    </div>
+                    
+                `;
+
+                validarRespuesta.innerHTML += respuestaHTML;
+            });
+             // Crear y agregar botón de verificar solo si no existe
+             if (!document.getElementById("btnVerificar")) {
+                const btnVerificar = document.createElement("button");
+                btnVerificar.textContent = "Verificar respuestas";
+                btnVerificar.id = "btnVerificar";
+                btnVerificar.addEventListener("click", () => {
+                    alert("Aquí podrías mostrar si todas son correctas o incorrectas.");
+                });
+
+                validarRespuesta.appendChild(btnVerificar);
+            }
+        }
+
+        // Evento para avanzar a la siguiente pregunta
+        btnSiguiente.addEventListener("click", () => {
+            if (indicePregunta < totalPreguntas - 1) {
+                indicePregunta++;
+                cargarPregunta();
+            } else {
+                btnSiguiente.style.display = "none"; // Ocultar botón de siguiente
+                contenedorquiz.classList.add("hidden"); // Ocultar contenedor de quices
+                validarRespuesta.classList.remove("hidden"); // Mostrar respuestas
+                mostrarRespuestas();
+            }
+        });
+
+        // Crear botón para verificar respuestas
+        const btnVerificar = document.getElementById('btnVerificar');
+        btnVerificar.textContent = "Verificar respuestas";
+        btnVerificar.id = "btnVerificar";
+
+        btnVerificar.addEventListener("click", () => {
+            alert("Aquí podrías mostrar si todas son correctas o incorrectas.");
+        });
+
+        // Cargar la primera pregunta
+        cargarPregunta();
+    } catch (error) {
+        console.error("Error cargando los quices:", error);
+    }
+}
+
+
 //funcion para acceder al cuento
 async function verCuento() {
     try {
@@ -196,11 +326,11 @@ async function verCuento() {
         console.log(data);
         const btnNext = document.getElementById('haciaDelante');
         const btnPrev = document.getElementById('haciaTras');
+        const btnIrQuiz = document.getElementById('ir-quizz');
         const dataImagen = document.getElementById('imagen-cuento');
         const nombreCuento = document.getElementById('nombre-cuento');
         const nivel = document.getElementById('nivel');
         const tituloNivel = document.getElementById('titulo-nivel');
-
         const ruta = '../asset/cuentos/mundo1/nivel1/';
         dataImagen.style.backgroundImage = `url(${ruta + data.imagenes[0]})`
         nombreCuento.textContent = data.titulo;
@@ -209,16 +339,31 @@ async function verCuento() {
         btnNext.addEventListener('click', ()=>{
             nextPag += 1;
             dataImagen.style.backgroundImage = `url(${ruta + data.imagenes[nextPag]})`
+            //saber si estamos en la ultima pagina del cuento 
+            if(nextPag === data.imagenes.length -1){
+                btnNext.classList.add('hidden')
+                btnPrev.classList.add('hidden')
+                btnIrQuiz.classList.remove('hidden')
+
+            }
         })
         btnPrev.addEventListener('click', ()=>{
             nextPag -= 1;
             dataImagen.style.backgroundImage = `url(${ruta + data.imagenes[nextPag]})`
         })
+        btnIrQuiz.addEventListener('click', ()=>{
+          contenedorQuices.classList.remove('hidden');  
+          sectionCuent0.classList.add('hidden');
+          console.log('ir a quices');
+          verQuices();
+        })
+        
 
     } catch (error) {
         console.error("Error cargando el cuento:", error);
     }
 }
+
 btnNivel1.addEventListener('click', ()=>{
     sectionMundo1.classList.add('hidden')
     headerPlataforma.classList.add('hidden')
