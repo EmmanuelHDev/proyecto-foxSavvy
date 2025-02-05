@@ -1,0 +1,126 @@
+{
+    "niveles": [
+      {
+        "id": "Nivel 1",
+        "titulo": "El secreto de la bellota dorada",
+        "imagenes": [
+          "portada1.webp",
+          "Página1.webp", 
+          "Página2.webp",
+          "Página3.webp", 
+          "Página4.webp",
+          "Página5.webp",
+          "Página6.webp"
+        ],
+        "quizz": [
+          {
+            "pregunta": "¿Qué es ahorrar?",
+            "opciones": {
+              "A": "Gastar todo en dulces",
+              "B": "Guardar dinero para después",
+              "C": "Pedir prestado"
+            },
+            "respuesta_correcta": "B"
+          },
+          {
+            "pregunta": "¿Para qué sirve ahorrar?",
+            "opciones": {
+              "A": "Para gastar más rápido",
+              "B": "Para comprar algo grande después",
+              "C": "Para perder el dinero"
+            },
+            "respuesta_correcta": "B"
+          },
+          {
+            "pregunta": "¿Dónde puedes guardar tu dinero?",
+            "opciones": {
+              "A": "En una alcancía",
+              "B": "Debajo de la cama",
+              "C": "En el parque"
+            },
+            "respuesta_correcta": "A"
+          },
+          {
+            "pregunta": "Si ahorras $10 cada semana, ¿cuánto tendrás en 3 semanas?",
+            "opciones": {
+              "A": "$10",
+              "B": "$20",
+              "C": "$30"
+            },
+            "respuesta_correcta": "C"
+          },
+          {
+            "pregunta": "¿Qué ayuda a ahorrar más?",
+            "opciones": {
+              "A": "Gastar en todo",
+              "B": "Comprar solo lo necesario",
+              "C": "Pedir más dinero"
+            },
+            "respuesta_correcta": "B"
+          }
+        ]
+      },
+      {
+        "id": "Nivel 2",
+        "titulo": "La Madriguera del Escondite Seguro",
+        "titulo2": "¿Cómo se ahorra?",
+        "imagenes": [
+          "nivel2_portada.webp",
+          "nivel2_Página1.webp", 
+          "nivel2_Página2.webp",
+          "nivel2_Página3.webp", 
+          "nivel2_Página4.webp",
+          "nivel2_Página5.webp",
+          "nivel2_Página6.webp"
+        ],
+        "quizz": [
+          {
+            "pregunta": "¿Por qué es importante ahorrar?",
+            "opciones": {
+              "A": "Para gastar todo lo que tenemos de una vez",
+              "B": "Para estar preparado para imprevistos o emergencias",
+              "C": "Para no tener nada cuando lo necesitemos"
+            },
+            "respuesta_correcta": "B"
+          },
+          {
+            "pregunta": "¿Cuál es una buena estrategia para empezar a ahorrar?",
+            "opciones": {
+              "A": "Gastar sin pensar en lo que necesitamos",
+              "B": "Guardar una pequeña cantidad cada semana",
+              "C": "Esperar a que alguien nos dé dinero"
+            },
+            "respuesta_correcta": "B"
+          },
+          {
+            "pregunta": "¿Qué es una alcancía?",
+            "opciones": {
+              "A": "Un lugar para guardar dinero de forma segura",
+              "B": "Un lugar donde dejamos nuestras cosas perdidas",
+              "C": "Un lugar para gastar todo nuestro dinero"
+            },
+            "respuesta_correcta": "A"
+          },
+          {
+            "pregunta": "¿Qué es más importante al ahorrar?",
+            "opciones": {
+              "A": "Gastar todo lo que tengamos antes de ahorrar",
+              "B": "Ahorrar regularmente, aunque sea una pequeña cantidad",
+              "C": "Gastar dinero sin importar el ahorro"
+            },
+            "respuesta_correcta": "B"
+          },
+          {
+            "pregunta": "Si guardas $5 cada semana, ¿cuánto tendrás después de 4 semanas?",
+            "opciones": {
+              "A": "$5",
+              "B": "$10",
+              "C": "$20"
+            },
+            "respuesta_correcta": "C"
+          }
+        ]
+      }
+    ]
+  }
+  

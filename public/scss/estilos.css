@@ -1016,6 +1016,68 @@ html {
     margin-bottom: 30px;
     border-radius: 10px;
   }
+  body main #plataforma #contenedor-quices #ValidarResultados {
+    width: 100%;
+    height: 100vh;
+    padding: 24px;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto 1fr auto;
+    align-items: center;
+    justify-items: center;
+    gap: 16px;
+  }
+  body main #plataforma #contenedor-quices #ValidarResultados #estrellas {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    justify-content: space-between;
+  }
+  body main #plataforma #contenedor-quices #ValidarResultados #estrellas img {
+    width: 80px;
+    height: 80px;
+  }
+  body main #plataforma #contenedor-quices #ValidarResultados h3 {
+    opacity: 0.5;
+  }
+  body main #plataforma #contenedor-quices #ValidarResultados #recompensas {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+  }
+  body main #plataforma #contenedor-quices #ValidarResultados #recompensas article {
+    text-align: center;
+  }
+  body main #plataforma #contenedor-quices #ValidarResultados #recompensas article img {
+    width: 60px;
+    height: 60px;
+  }
+  body main #plataforma #contenedor-quices #ValidarResultados #recompensas article p {
+    font-size: 16px;
+    font-weight: 500;
+  }
+  body main #plataforma #contenedor-quices #ValidarResultados #recompensas article .recompensa-moneda {
+    color: #FFEC27;
+  }
+  body main #plataforma #contenedor-quices #ValidarResultados #recompensas article .recompensa-experiencia {
+    color: #9ccc65;
+  }
+  body main #plataforma #contenedor-quices #ValidarResultados .avanzar {
+    opacity: 0.5;
+    font-weight: 500;
+  }
+  body main #plataforma #contenedor-quices #ValidarResultados #avanzarNivel {
+    width: 200px;
+    height: 52px;
+    padding: 8px;
+    border-radius: 8px;
+    color: #f0f0f0;
+    font-weight: 500;
+    background-color: var(--colorPrincipal);
+  }
   body main #plataforma footer {
     position: fixed;
     bottom: 0;

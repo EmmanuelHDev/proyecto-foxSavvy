@@ -54,20 +54,20 @@
             <header id="header_plataforma">
                 <nav>
                     <ul>
-                        <li class="user_name">Emmanuel H</li>
+                        <li class="user_name"></li>
                         <li class="racha">
                             <span></span>
-                            <div id="puntos_racha">10</div>
+                            <div id="puntos_racha"></div>
 
                         </li>
                         <li class="monedas">
                             <span></span>
-                            <p id="puntos_monedas">110</p>
+                            <p id="puntos_monedas"></p>
 
                         </li>
                         <li class="experiencia">
                             <span></span>
-                            <p class="puntos_experiencia">1110</p>
+                            <p class="puntos_experiencia"></p>
                         </li>
                     </ul>
                 </nav>
@@ -244,12 +244,12 @@
                 <article class="perfil-usuario">
                     <img src="asset/img/racha.png" alt="">
                     <div class="perfil_usuario">
-                        <h2>Emmanuel H</h2>
+                        <h2 class="nombrePerfil"></h2>
                         <div class="perfil_puntos">
                             <span class="perfil_monedas"></span>
-                            <p>110</p>
+                            <p class="monedas_perfil"></p>
                             <span class="perfil_experiencia"></span>
-                            <p class="puntos_experiencia">100</p>
+                            <p class="puntos_experiencia-perfil"></p>
                         </div>
                     </div>
 
@@ -257,7 +257,7 @@
                 <div class="amigos">
                     <h3>Amigos</h3>
                     <div class="agregarAmigo">
-                        <p>Cantidad de amigos: <span id="cantidad_amigos">11</span></p>
+                        <p>Cantidad de amigos: <span id="cantidad_amigos"></span></p>
                         <button id="btn_buscar-amigos"><span></span>Agragar Amigos</button>
                     </div>
                 </div>
@@ -291,21 +291,21 @@
             </section>
             <section id="contenedor-mundo_1" class="hidden">
                 <div class="encabesado-niveles">
-                    <p id="nivel">Nivel1</p>
-                    <p id="titulo-nivel">¿Qué es el ahorro?</p>
+                    <p id="nivel"></p>
+                    <p id="titulo-nivel"></p>
                 </div>
                 <div class="camino-niveles">
-                    <div id="nivel1" class="nivel"><span></span></div>
+                    <div id="nivel1" class="nivel"><span class="icono"></span></div>
                     <div id="linea1" class="line"></div>
-                    <div id="nivel2" class="nivel">
-                        <span></span>
+                    <div id="nivel2" class="nivel bloqueado">
+                        <span class="icono candado"></span>
                     </div>
                     <div id="linea2" class="line"></div>
-                    <div id="nivel3" class="nivel"><span></span></div>
+                    <div id="nivel3" class="nivel bloqueado"><span  class="icono"></span></div>
                     <div id="linea3" class="line"></div>
-                    <div id="nivel4" class="nivel"><span></span></div>
+                    <div id="nivel4" class="nivel bloqueado"><span  class="icono"></span></div>
                     <div id="linea4" class="line"></div>
-                    <div id="nivel5" class="nivel"><span></span></div>
+                    <div id="nivel5" class="nivel bloqueado"><span  class="icono"></span></div>
                 </div>
             </section>
             <section id="contenedor-mundo_2" class="hidden"></section>
@@ -317,7 +317,8 @@
                 <div class="desplazarme">
                     <button id="haciaTras"><span></span></button>
                     <button id="haciaDelante"><span></span></button>
-                    <button id="ir-quizz" class="hidden">Ver el quizz</button>
+                    <button id="ir-quizz1" class="hidden">Ver el quizz</button>
+                    <button id="ir-quizz2" class="hidden">Ver el quizz</button>
                 </div>
             </section>
             <section id="contenedor-quices" class="hidden">
@@ -336,8 +337,26 @@
                     </div>
                     <button id="siguientePregunta">Siguiente</button>
                 </div>
-                <div id="validarRespuesta" class="hidden">
-                    <button id="btnVerificar"></button>
+                <div id="ValidarResultados" class="hidden">
+                    <div id="estrellas">
+                        <img src="asset/icon/star.svg" alt="jl">
+                        <img src="asset/icon/star.svg" alt="bj">
+                        <img src="asset/icon/star.svg" alt="jbj">
+                    </div>
+                    <img src="" alt="">
+                    <h3>Recompensas</h3>
+                    <div id="recompensas">
+                        <article>
+                            <img src="asset/img/savvycoins.svg" alt="">
+                            <p class="recompensa-moneda"></p>
+                        </article>
+                        <article>
+                            <img src="asset/img/hojas.png" alt="">
+                            <p class="recompensa-experiencia"></p>
+                        </article>
+                    </div>
+                    <p class="avanzar">Avanzar al siguiente nivel</p>
+                    <button id="avanzarNivel">Avanzar</button>
                 </div>
             </section>
 
@@ -499,5 +518,6 @@
         </section>
     </main>
     <script src="/src/main.js"></script>
+    <script src="/src/main-server.js"></script>
 </body>
 </html>
